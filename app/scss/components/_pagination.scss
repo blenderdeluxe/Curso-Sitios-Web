@@ -1,0 +1,22 @@
+.pagination{
+    margin: 0 auto;
+    li{
+        display: inline-block;
+        margin: 1px;
+        font-size: 1.1em;
+        &.active{
+            font-weight: 600;
+        }
+        &.disabled{
+            color: #d6d6d6;
+        }
+        a{
+            padding: 3px;
+            text-decoration: none;
+            &hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    
+}

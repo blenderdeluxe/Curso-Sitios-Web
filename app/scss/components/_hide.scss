@@ -1,0 +1,36 @@
+// Visibilidad
+
+// Visibilidad desde $size
+@each $size, $screen-size in $breakpoints{
+  @media screen and (max-width: $screen-size - 1){
+    .visible-from-#{$size}{
+      display: none !important;
+    }
+  }
+}
+
+// Visibilidad hasta $size
+@each $size, $screen-size in $breakpoints{
+  @media screen and (min-width: $screen-size){
+    .visible-to-#{$size}{
+      display: none !important;
+    }
+  }
+}
+
+.hide{
+  display: none;
+}
+
+@media screen
+{
+    .hide-Print{}
+    .visible-print{display:none;}
+}
+
+@media print
+{
+    .hide-print{display:none;}
+    .visible-print{}
+}
+

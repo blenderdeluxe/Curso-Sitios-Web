@@ -1,0 +1,78 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-family: $default-font-family;
+    font-size: 16px;
+    font-weight: $body--font-weight;
+}
+html,body{
+    height: 100%;
+}
+figure{
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+// Imágenes responsive
+img {
+    max-width: 100%;
+    height: auto;
+}
+nav,ul,nav li,ul li,nav ul li{
+    list-style: none !important;
+    margin:0;
+    padding: 0;
+}
+
+
+
+blockquote {
+
+}
+// Estilos básicos de los encabezados
+h1, h2, h3, h4, h5, h6 {
+    font-weight    : $header--font-weight;
+    text-transform : $header--text-transform;
+    color          : $header--color;
+}
+
+// Tamaños y estilos de los encabezados:
+h1 {
+    font-size : $h1--font-size;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size : $h2--font-size;
+}
+
+h3 {
+    font-size : $h3--font-size;
+}
+
+h4 {
+    font-size : $h4--font-size;
+}
+
+h5 {
+    font-size : $h5--font-size;
+}
+
+h6 {
+    font-size : $h6--font-size;
+}

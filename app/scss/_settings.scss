@@ -1,0 +1,87 @@
+
+// Ancho máximo de cada grupo
+$max-width: 1024px;
+
+
+// Separación entre cajas
+$padding: 15px;
+
+
+
+
+// Variables para aplicarlas en font-weight
+  $light      : 300;
+  $normal     : 400;
+  $semi-bold  : 600;
+  $bold       : 700;
+  $extra-bold : 800;
+
+
+// ESTILOS BASE
+  $body--background  : #fff;                      // fondo para el body
+  $default-font-family: 'Open Sans', sans-serif;
+  $body--color       : #333;                      // color de texto predeterminado
+  $body--font-weight: 400;
+
+// ESTILOS DE ENCABEZADOS
+// fuente para los headers (h1,h2,h3...)
+  $header--font-weight    : $bold;                    // grosor de fuente para los headers
+  $header--text-transform : normal;                   // normal, uppercase, lowercase, capitalize
+  $header--color          : #333;                     // color predeterminado de los header
+
+// TAMAÑO DE LOS ENCABEZADOS (h1...h6)
+  $h1--font-size : 2em;
+  $h2--font-size : 1.6em;
+  $h3--font-size : 1.3em;
+  $h4--font-size : 0.9em;
+  $h5--font-size : .9em;
+  $h6--font-size : .8em;
+
+
+
+// Tamaños. Puede editar los nombres y las
+// medidas, añadir más o quitar.
+$breakpoints: (
+  movil  : 480px,
+  tablet : 768px,
+  web    : 1024px,
+  hd     : 1400px
+);
+
+// Fracciones para los anchos de las cajas.
+// También puede editarlos si desea
+$fracciones: (
+  tercios : 3,
+  sextos  : 6,
+  octavos : 8
+);
+
+
+
+
+
+
+
+//Colores
+$verde-normal : #b2ff59;
+
+
+@import "components/normalize";
+@import "components/base";
+@import "components/flexbox"; 
+@import "components/mixins";
+@import "components/grids";
+@import "components/hide";
+@import "components/debug";
+@import "components/shadows";
+@import "components/utilities";
+@import "components/forms";
+@import "components/tables";
+@import "components/zdepth";
+@import "components/pagination";
+@import "custom/background-colors";
+
+
+//Estilos propios
+@import "icomoon";
+@import "buttons/buttons";

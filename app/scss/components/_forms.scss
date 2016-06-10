@@ -1,0 +1,149 @@
+form{
+    width: 100%;
+}
+
+
+input[type='text']:focus,input[type='email']:focus,input[type='password']:focus, select:focus, textarea:focus{
+    background: white;
+}
+input[type='text'],input[type='email'],input[type='password'], select, textarea{
+    background: white;
+    border-radius: 2px;
+}
+input[type='text'],input[type='email'],input[type='password']{
+    padding: 4px;
+    margin:0;
+
+    width: 100%;
+    
+    border:1px solid #c4c4c4;
+    font-size: 0.85em;
+}
+label{
+    font-size: 0.85em;
+}
+input[type='submit']{
+    padding: 10px;
+    width: 100%;
+    border-radius: 2px;
+    border:none;
+    background: #0277bd;
+    color:white;
+    &:hover{
+        background: #01579b;
+        color: white;
+    }
+}
+
+textarea{
+    height: 80px;
+}
+
+
+button{
+    background: #0277bd;
+    border-radius: 2px;
+    border:none;
+    padding: 4px;
+    color:white;
+    &:hover{
+        background: #01579b;
+        color: white;
+    }
+}
+
+.padding-input-form{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+select{
+    font-size: 0.9em;
+    padding: 4px;
+}
+
+
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-success {
+    color: #3C763D;
+    background-color: #DFF0D8;
+    border-color: #D6E9C6;
+}
+.alert-info {
+    color: #31708F;
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+}
+.alert-warning {
+    color: #8A6D3B;
+    background-color: #FCF8E3;
+    border-color: #FAEBCC;
+}
+.alert-danger {
+    color: #A94442;
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+}
+
+input[type=text].input-invalid, input[type=password].input-invalid,input[type=email].input-invalid, select.input-invalid, textarea.input-invalid{
+  border: 1px solid #b10000;
+}
+
+.error-validation, .error-help-block{
+    font-size: 0.9em;
+    padding: 0;
+    color: #A94442;
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+    margin-bottom: 8px;
+}
+
+
+.form-section{
+    margin: 10px 0;
+}
+
+
+
+.btn-default{
+    padding: 5px;
+    width: 100%;
+    border-radius: 2px;
+    border:none;
+    background: #0277bd;
+    color:white;
+    &:hover{
+        background: #01579b;
+        color: white;
+    }
+}
+
+
+
+
+
+// Breakpoints
+@each $size, $screen-size in $breakpoints{
+  // Loops para tamaños en porcentajes y fracciones
+  @media all and (min-width: $screen-size){
+    // Tamaños en porcentajes
+    @for $i from 1 through 20 {
+      .input-#{$size}-#{$i*5}{
+        width: unquote($i*5 + "%");
+      }
+    }
+    //Tamaño en fracciones
+    @each $fraccion-nombre, $fraccion in $fracciones{
+      @for $i from 1 through $fraccion{
+        .input-#{$size}-#{$i}-#{$fraccion}{
+          width: (100% / $fraccion) * $i;
+        }
+      }
+    }
+  }
+}
