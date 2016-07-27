@@ -14,6 +14,12 @@ $ git clone https://github.com/blenderdeluxe/gulp-jade.git
 $ npm install
 ```
 
+In case that npm start not work because node-sass you need rebuild this with this command
+```bash
+npm rebuild node-sass
+```
+
+If this not work again you try with this
 **Step 3**: Uninstall sass
 ```bash
 $ npm uninstall --save-dev gulp-sass
