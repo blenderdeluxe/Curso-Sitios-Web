@@ -9,7 +9,12 @@ To try this example, follow these 5 simple steps.
 $ git clone https://github.com/blenderdeluxe/gulp-jade.git
 ```
 
-**Step 2**: Install dependencies
+**Step 3**: Clear cache NPM
+```bash
+$ npm cache clean
+```
+
+**Step 3**: Install dependencies
 ```bash
 $ npm install
 ```
@@ -20,17 +25,17 @@ npm rebuild node-sass
 ```
 
 If this not work again you try with this
-**Step 3**: Uninstall sass
+Uninstall sass
 ```bash
 $ npm uninstall --save-dev gulp-sass
 ```
 
-**Step 4**: Reinstall sass
+Reinstall sass
 ```bash
 $ npm install --save-dev gulp-sass
 ```
 
-**Step 5**: Run the example
+**Step 4**: Run the example
 ```bash
 $ npm start
 ```
